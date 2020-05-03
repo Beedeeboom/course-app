@@ -1,0 +1,9 @@
+<h1>Courses Available</h1>
+
+<%= button_to "Create New Course", new_course_path, method: :get %>
+<ul>
+    <% @courses.each do |course|%>
+    <li><%= link_to course.name, course_path(course)%></li>
+<%end%>
+</ul>
+
